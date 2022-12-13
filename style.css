@@ -1,21 +1,27 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .deck-holder {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
+  gap: 10px;
+  padding: 30px;
 }
 
-.front-face {
-  height: 150px;
-  width: 100px;
-  margin: 10px;
-  background-color: cadetblue;
-  border-radius: 5px;
-  padding: 10px;
+.memory-card {
+  display: flex;
+  gap: 10px;
 }
 
-.back-face {
+.face {
+  display: flex;
   height: 150px;
   width: 100px;
-  margin: 10px;
   background-color: cadetblue;
   border-radius: 5px;
   padding: 10px;
