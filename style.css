@@ -11,18 +11,41 @@
   flex-wrap: wrap;
   gap: 10px;
   padding: 30px;
+  min-width: 200px;
+  max-width: 500px;
+  margin: 0 auto;
+  perspective: 1000px;
 }
 
 .memory-card {
-  display: flex;
-  gap: 10px;
+  position: relative;
+  width: 100px;
+  height: 150px;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  pointer-events: all;
+  transform-style: preserve-3d;
+}
+
+.memory-card:active {
+  transform: scale(0.95);
 }
 
 .face {
-  display: flex;
-  height: 150px;
-  width: 100px;
-  background-color: cadetblue;
+  position: absolute;
   border-radius: 5px;
+  width: 100px;
+  height: 150px;
+  background-color: cadetblue;
   padding: 10px;
+  pointer-events: none;
+  backface-visibility: hidden;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
+
+.memory-card.flip {
+  transform: rotateY(180deg);
 }
