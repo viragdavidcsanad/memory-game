@@ -1,5 +1,3 @@
-// FLIP EFFECT
-
 const $memoCard = document.querySelectorAll(".js_memo_card");
 
 function flipCard() {
